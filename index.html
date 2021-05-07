@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>相册</title>
+		<style type="text/css">
+			* {
+				padding: 0 ;
+				margin: 0 auto;
+			}
+			.box1,.box2 {/*全*/
+				width: 800px;
+				height: 800px;
+				margin-top: 50px;
+				position: relative;
+				background: #f0f0f0; 
+			}
+			.box2 {
+				display: none;
+				flex-direction: column;
+			}
+			.box1 {display: flex;}
+			.end {/*下*/
+				width: 800px;
+				height: 35px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="#">
+			<div class="box1">
+				<iframe src="login .html" width="800px" height="800px"></iframe>
+			</div>
+			<div class="box2">
+				<iframe src="top.html" width="800px" height="45px"></iframe>
+				<iframe src="mod.html" width="800px" height="710px"></iframe>
+				<div class="end"></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var box1 = document.querySelector('.box1');
+			var box2 = document.querySelector('.box2')
+			box1.addEventListener('click',function(){
+				box2.style.display = 'flex'
+				box1.style.display = 'none'
+			})
+		</script>
+	</body>
+</html>
